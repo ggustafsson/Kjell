@@ -18,7 +18,6 @@ backup_objects=(
   ~/.ssh
   ~/Documents
   ~/Dropbox
-  ~/Golang
   ~/Movies
   ~/Music
   ~/Pictures
