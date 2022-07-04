@@ -26,5 +26,7 @@ for object in $remove_objects; do
   fi
 done
 
-echo "\nRemoving dangling Docker images...\n"
-docker image prune --force
+if [[ -S /var/run/docker.sock ]]; then
+  echo "\nRemoving dangling Docker images...\n"
+  docker image prune --force
+fi
