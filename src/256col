@@ -3,7 +3,7 @@
 # Description: Pretty prints all 256 terminal colors. Handy when making color
 # schemes for Vim etc.
 #
-# Usage: 256colors
+# Usage: 256col
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
