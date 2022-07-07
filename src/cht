@@ -11,11 +11,11 @@
 # ~/.tmux.conf:
 #
 #   bind Enter menu -T "#[align=centre] Launcher " \
-#     "Open Cheat" c "popup -EE -h 60% -w 60% cheat --ask"
+#     "Open Cheat" c "popup -EE -h 60% -w 60% cht --ask"
 #
-# Usage: cheat
-#        cheat <query>
-#        cheat --ask
+# Usage: cht
+#        cht <query>
+#        cht --ask
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
