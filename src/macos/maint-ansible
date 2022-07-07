@@ -29,6 +29,6 @@ if [[ $git_pull -eq 1 ]]; then
 fi
 
 print -P "%B%F{cyan}ansible-playbook ${playbook}:%f%b"
-confirm || exit 1
+ack || exit 1
 cd $directory
 ansible-playbook $playbook --ask-become || exit $?

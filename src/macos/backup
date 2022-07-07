@@ -9,7 +9,7 @@
 # License: BSD 3-Clause
 
 if [[ $1 != (-y|--yes) ]]; then
-  confirm || exit 1
+  ack || exit 1
 fi
 
 destination=/Volumes/Keychain\ 1

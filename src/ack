@@ -4,8 +4,8 @@
 # or status 1 (error) depending on answer. Anything but input of "y" or "Y"
 # leads to exit status 1.
 #
-# Usage: confirm && x
-#        confirm || exit 1
+# Usage: ack && x
+#        ack || exit 1
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
