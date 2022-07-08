@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# Description: Wrapper for 'pbcopy' that removes end-of-file newline. Using
+# script instead of alias to allow for usage in Vim and other scripts.
+#
+# Usage: echo x | yank
+#
+# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# License: BSD 3-Clause
+
+gsed -z '$ s/\n$//' | pbcopy
