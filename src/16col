@@ -13,37 +13,36 @@ color() {
 }
 
 # Foreground colors.
-for number in {30..37}; do
-  color $number
+for code in {30..37}; do
+  color $code
 done && echo
 
 # Bright foreground colors.
-for number in {90..97}; do
-  color $number
+for code in {90..97}; do
+  color $code
 done && echo
 
 # Background colors.
-for number in {40..47}; do
-  color $number
+for code in {40..47}; do
+  color $code
 done && echo
-for number in {40..47}; do
+for code in {40..47}; do
   echo -n "\e[30m"
-  color $number
+  color $code
 done && echo
 
 # Bright background colors.
-for number in {100..107}; do
-  color $number
+for code in {100..107}; do
+  color $code
 done && echo
-for number in {100..107}; do
+for code in {100..107}; do
   echo -n "\e[30m"
-  color $number
+  color $code
 done && echo
 
 echo '
- Escape    = \\e[
- Regular   = \\e[0m
- \e[1mBold\e[0m      = \\e[1m
- \e[3mItalic\e[0m    = \\e[3m
- \e[4mUnderline\e[0m = \\e[4m
- Reset     = \\e[0m'
+Escape    = \\e[
+Reset     = \\e[0m
+\e[1mBold\e[0m      = \\e[1m
+\e[3mItalic\e[0m    = \\e[3m
+\e[4mUnderline\e[0m = \\e[4m'
