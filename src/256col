@@ -8,11 +8,11 @@
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
 
-reset="\x1b[0m"
+rst="\e[0m"
 
-for number in {0..255}; do
-  foreground="\x1b[38;5;${number}m"
-  background="\x1b[48;5;${number}m"
+for code in {0..255}; do
+  fg="\e[0;38;5;${code}m"
+  bg="\e[30;48;5;${code}m"
 
-  echo "$background    $reset ${foreground}Color ${number}$reset"
+  printf "$bg Color %-3s $rst ${fg}Color ${code}$rst\n" $code
 done
