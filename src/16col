@@ -1,20 +1,42 @@
 #!/usr/bin/env zsh
 
-# Description: Pretty prints ANSI escape sequence of first 16 terminal colors.
+# Description: Pretty prints ANSI escape sequence of first 16 terminal colors
+# and additional style attributes.
 #
 # Usage: 16col
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
 
+color() {
+  printf "\e[${number}m %-4s \e[0m " "${number}m"
+}
+
+# Foreground colors.
 for number in {30..37}; do
-  echo -n "\033[0;${number}m0;${number}m\033[0m "
+  color $number
 done && echo
 
-for number in {30..37}; do
-  echo -n "\033[1;${number}m1;${number}m\033[0m "
+# Bright foreground colors.
+for number in {90..97}; do
+  color $number
 done && echo
 
+# Background colors.
 for number in {40..47}; do
-  echo -n "\033[1;${number}m1;${number}m\033[0m "
+  color $number
 done && echo
+
+# Bright background colors.
+for number in {100..107}; do
+  echo -n "\e[30m"
+  color $number
+done && echo
+
+echo '
+ Escape    = \\e[
+ Regular   = \\e[0m
+ \e[1mBold\e[0m      = \\e[1m
+ \e[3mItalic\e[0m    = \\e[3m
+ \e[4mUnderline\e[0m = \\e[4m
+ Reset     = \\e[0m'
