@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+# Description: Combines "ask" and "cht" for use in Tmux popup window.
+#
+# Dependencies: ask & cht
+#
+# ~/.tmux.conf:
+#
+#   bind Enter menu -T "#[align=centre] Launcher " \
+#     "Open Cheat" c "popup -EE -h 60% -w 60% tmux-cht"
+#
+# Usage: tmux-cht
+#
+# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# License: BSD 3-Clause
+
+title="Enter cheat.sh query..."
+input=$(ask $title)
+
+if [[ -n $input ]]; then
+  cht $input
+else
+  exit 1
+fi

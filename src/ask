@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+# Description: Asks for input and loops until non-empty value. Used for running
+# non-interactive programs in a interactive way, e.g. in Tmux popup windows.
+#
+# Dependencies: dialog
+#
+# Examples:
+#
+#   # Quick & dirty. Empty value can pass.
+#   man $(ask 'Man page?')
+#
+#   # Long & safe. Empty value not allowed.
+#   input=($(ask 'Man page?'))
+#   [[ -n $input ]] && man $input
+#
+# Usage: ask
+#        ask <title>
+#
+# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# License: BSD 3-Clause
+
+if [[ $# -ge 1 ]]; then
+  title=$*
+else
+  title="Enter input..."
+fi
+
+unset input
+while [[ -z $input ]]; do
+  input=($(dialog --inputbox $title 0 40 2>&1 > /dev/tty))
+
+  if [[ $? -ne 0 ]]; then
+    exit 1
+  fi
+done
+
+echo $input

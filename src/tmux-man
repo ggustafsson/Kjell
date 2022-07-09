@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+# Description: Combines "ask" and "man" for use in Tmux popup window.
+#
+# Dependencies: ask
+#
+# ~/.tmux.conf:
+#
+#   bind Enter menu -T "#[align=centre] Launcher " \
+#     "Open Man" m "popup -EE -h 60% -w 60% tmux-man"
+#
+# Usage: tmux-man
+#
+# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# License: BSD 3-Clause
+
+title="Enter man page(s)..."
+input=($(ask $title)) # Use array to allow for multiple man pages.
+
+if [[ -n $input ]]; then
+  man $input
+else
+  exit 1
+fi
