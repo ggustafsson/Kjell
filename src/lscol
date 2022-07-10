@@ -4,15 +4,17 @@
 #
 # Usage: lscol
 #
-# Original script found here:
-#   <http://unix.stackexchange.com/questions/20721/testing-ls-colors-in-zsh>
+# Original: https://unix.stackexchange.com/a/20742/13456
+#
+# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# License: BSD 3-Clause
 
-if [[ ! $LS_COLORS ]]; then
+if [[ -z $LS_COLORS ]]; then
   echo "Variable 'LS_COLORS' is not set! Exiting..."
   exit 1
 fi
 
-# Options here are based on output from "dircolors" version 9.0.
+# Items and order are based on output from "dircolors" version 9.0.
 typeset -A names
 names[bd]="block device"
 names[ca]="capability"
@@ -38,6 +40,6 @@ names[tw]="sticky other writable"
 for item in ${(s.:.)LS_COLORS}; do
   key=${item%\=*}
   color=${item#*\=}
-  name=${names[(e)$key]-$key}
-  printf '\e[%sm%s\e[m\n' $color $name
+  name=${names[$key]}
+  printf '%s  \e[%sm%s\e[0m\n' $key $color $name
 done
