@@ -8,7 +8,7 @@
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
 
-remove_objects=(
+rm_objects=(
   ~/Library/Caches/Homebrew
   ~/Library/Caches/com.apple.dt.Xcode/Downloads
   ~/Library/Logs/Homebrew
@@ -19,7 +19,7 @@ remove_objects=(
 
 echo "Removing space hogging files..."
 
-for object in $remove_objects; do
+for object in $rm_objects; do
   if [[ -a $object ]]; then
     echo
     rm -rfv $object

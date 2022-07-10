@@ -20,15 +20,15 @@ case $HOST in
     exit 1
 esac
 
-directory=~/Projects/Ansiblebot
+dir=~/Projects/Ansiblebot
 
 if [[ $git_pull -eq 1 ]]; then
-  print -P "%B%F{cyan}git pull @ ${directory/${HOME}/~}:%f%b"
-  git -C $directory pull
+  print -P "%B%F{cyan}git pull @ ${dir/${HOME}/~}:%f%b"
+  git -C $dir pull
   echo
 fi
 
 print -P "%B%F{cyan}ansible-playbook ${playbook}:%f%b"
 confirm || exit 1
-cd $directory
+cd $dir
 ansible-playbook $playbook --ask-become || exit $?
