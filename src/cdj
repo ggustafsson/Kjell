@@ -24,7 +24,6 @@ fi
 
 cdj_sel=$(\ls "$cdj_dir" | fzf --tac)
 if [[ -z $cdj_sel ]]; then
-  echo "Nothing selected! Exiting..."
   return 1
 fi
 
