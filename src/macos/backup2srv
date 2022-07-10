@@ -2,6 +2,8 @@
 
 # Description: Backs up miscellaneous files/directories to server with Rsync.
 #
+# Dependencies: rsync
+#
 # Usage: backup2srv
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)

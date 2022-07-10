@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# Description: Quickly run "cp file{,.bck}" on one or more files and optionally
-# open in editor. Flag --nnn starts non-interactive mode for use as nnn plugin.
+# Description: Quickly run "cp file{,.bck}" on one or more files. Optional
+# non-interactive mode for use as nnn plugin.
 #
 # ~/.zshrc:
 #

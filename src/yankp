@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# Description: Lookup full path to files/directories and copy list to
-# clipboard. Flag --nnn starts non-interactive mode for use as nnn plugin.
+# Description: Lookup full path to files/directories and copy list to system
+# clipboard. Optional non-interactive mode for use as nnn plugin.
 #
 # ~/.zshrc:
 #

@@ -4,12 +4,14 @@
 # capitalization of tags are enabled by default and depends on "title" script,
 # disable feature with -i flag.
 #
-# Dependencies: flac and lame. title is optional.
+# Dependencies: flac & lame
+# Optional: https://github.com/ggustafsson/Kjell/blob/master/src/title
 #
 # Usage: flac2mp3 <file>
 #        flac2mp3 --ignore-case <file>
 #        flac2mp3 *.flac
 #        find . -type f -iname "*.flac" -exec flac2mp3 "{}" \;
+#        fd --extension flac --exec flac2mp3
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause

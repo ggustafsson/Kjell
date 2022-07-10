@@ -1,7 +1,9 @@
 #!/usr/bin/env zsh
 
-# Description: Frontend for https://cheat.sh. Result is displayed in Nvim pager
-# with custom cheat filetype for highlights.
+# Description: Frontend for https://cheat.sh. Result is displayed in Vim/Nvim
+# pager with custom cheat filetype for highlights.
+#
+# Optional: https://github.com/ggustafsson/Kjell/blob/master/src/view
 #
 # ~/.config/nvim/syntax/cheat.vim:
 #
@@ -14,8 +16,6 @@
 # License: BSD 3-Clause
 
 url=https://cheat.sh
-
-# Command "view" is basically "nvim -R", see separate script.
 pager="view -c 'setlocal filetype=cheat nolist' -"
 
 if [[ $# -ge 1 ]]; then

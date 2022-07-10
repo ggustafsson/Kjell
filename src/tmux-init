@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# Description: Start new (or attach existing) custom Tmux sessions.
+# Description: Start custom Tmux sessions.
 #
 # Usage: tmux-init
 #

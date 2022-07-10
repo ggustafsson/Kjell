@@ -15,8 +15,10 @@
 # Usage: cdb
 #        cdb <pattern>
 #
-# Original script: https://github.com/vigneshwaranr/bd/blob/master/bd
-# Modified by: Göran Gustafsson (gustafsson.g at gmail.com)
+# Original: https://github.com/vigneshwaranr/bd/blob/master/bd
+#
+# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# License: BSD 3-Clause
 
 if [[ $# -eq 1 ]]; then
   cdb_dir=$(echo $PWD | sed 's|\(.*/'${1}'[^/]*/\).*|\1|')

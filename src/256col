@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
-# Description: Pretty prints all 256 terminal colors. Handy when making color
-# schemes for Vim etc.
+# Description: Pretty prints all 256 terminal colors.
 #
 # Usage: 256col
 #
