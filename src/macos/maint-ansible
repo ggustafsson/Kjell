@@ -2,6 +2,9 @@
 
 # Description: Executes Ansible playbook for local setup.
 #
+# Dependencies: confirm
+#   https://github.com/ggustafsson/Kjell/blob/master/src/confirm
+#
 # Usage: maint-ansible
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
