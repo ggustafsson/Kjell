@@ -1,13 +1,6 @@
 #!/usr/bin/env zsh
 
-# Description: Frontend for https://cheat.sh. Result is displayed in Vim/Nvim
-# pager with custom cheat filetype for highlights.
-#
-# Optional: https://github.com/ggustafsson/Kjell/blob/master/src/view
-#
-# ~/.config/nvim/syntax/cheat.vim:
-#
-#   syntax match Comment /^#.*/
+# Description: Frontend for https://cheat.sh. Result is displayed in PAGER.
 #
 # Usage: cht
 #        cht <query>
@@ -16,7 +9,6 @@
 # License: BSD 3-Clause
 
 url=https://cheat.sh
-pager="view -c 'setlocal filetype=cheat nolist' -"
 
 if [[ $# -ge 1 ]]; then
   input=$*
@@ -35,7 +27,7 @@ if [[ $# -ge 1 ]]; then
 
   header="# Source: $url_full\n"
   output="$header\n$response"
-  echo $output | eval $pager
+  echo $output | eval ${PAGER:=less}
 else
   curl --no-progress-meter "$url/:help"
 fi
