@@ -19,7 +19,8 @@ url=https://cheat.sh
 pager="view -c 'setlocal filetype=cheat nolist' -"
 
 if [[ $# -ge 1 ]]; then
-  query=${*// /+} # Replace spaces with "+" for valid URL.
+  input=$*
+  query=${input// /+} # Replace spaces with "+" for valid URL.
   url_full="${url}/${query}?T" # "?T" disables colors in response.
 
   # Fetch cheat page and fix some formatting issues.
