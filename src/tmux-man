@@ -3,6 +3,7 @@
 # Description: Combines "ask" and "man" for use in Tmux popup window.
 #
 # Dependencies: ask
+#   https://github.com/ggustafsson/Kjell/blob/master/src/ask
 #
 # ~/.tmux.conf:
 #
