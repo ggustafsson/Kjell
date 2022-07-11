@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+# Description: Surf the web like it is 1999 with Lynx. Searches DuckDuckGo.
+#
+# Usage: surf
+#        surf <query>
+#
+# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# License: BSD 3-Clause
+
+url=https://lite.duckduckgo.com/lite
+browser=lynx
+
+if [[ $# -ge 1 ]]; then
+  input=$*
+  query=${input// /+} # Replace spaces with "+" for valid URL.
+  search_url="$url\?q=$query"
+
+  eval $browser $search_url
+else
+  eval $browser $url
+fi
