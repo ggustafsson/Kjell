@@ -21,7 +21,7 @@ pager="view -c 'setlocal filetype=cheat nolist' -"
 if [[ $# -ge 1 ]]; then
   input=$*
   query=${input// /+} # Replace spaces with "+" for valid URL.
-  url_full="${url}/${query}?T" # "?T" disables colors in response.
+  url_full="$url/$query?T" # "?T" disables colors in response.
 
   # Fetch cheat page and fix some formatting issues.
   # Remove empty lines at start and end: /./,$!d
@@ -34,8 +34,8 @@ if [[ $# -ge 1 ]]; then
     sed -e '/./,$!d')
 
   header="# Source: $url_full\n"
-  output="${header}\n$response"
+  output="$header\n$response"
   echo $output | eval $pager
 else
-  curl --no-progress-meter "${url}/:help"
+  curl --no-progress-meter "$url/:help"
 fi

@@ -21,7 +21,7 @@
 # License: BSD 3-Clause
 
 if [[ $# -eq 1 ]]; then
-  cdb_dir=$(echo $PWD | sed 's|\(.*/'${1}'[^/]*/\).*|\1|')
+  cdb_dir=$(echo $PWD | sed 's|\(.*/'$1'[^/]*/\).*|\1|')
   if [[ $cdb_dir != $PWD ]]; then
     cd "$cdb_dir"
   else

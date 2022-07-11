@@ -31,11 +31,11 @@ shift # Remove flag for argument list.
 
 for arg; do
   if [[ ! -a $arg ]]; then
-    echo "Item '${arg}' does not exist! Skipping..."
+    echo "Item '$arg' does not exist! Skipping..."
     continue
   fi
 
-  echo "Changing permissions on '${arg}'."
+  echo "Changing permissions on '$arg'."
 
   if [[ $OSTYPE == darwin* ]]; then
     find $arg -type d              -exec chmod -N "{}" \; -exec chmod $mode_dir "{}" \;

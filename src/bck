@@ -29,7 +29,7 @@ mkbck() {
 
   for arg; do
     if [[ -f $arg ]]; then
-      eval "$cmd '${arg}' '${arg}.bck'"
+      eval "$cmd '$arg' '$arg.bck'"
     fi
   done
 }

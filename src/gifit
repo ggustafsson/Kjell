@@ -17,13 +17,13 @@ fi
 
 for arg; do
   if [[ ! -f $arg ]]; then
-    echo "File '${arg}' does not exist! Exiting..."
+    echo "File '$arg' does not exist! Exiting..."
     exit 1
   fi
 done
 
 date=$(date '+%Y-%m-%d_%H%M')
-filename=animated_${date}.gif # animated_2022-01-25_2104.gif
+filename=animated_$date.gif # animated_2022-01-25_2104.gif
 convert -delay 30 -loop 0 $* $filename
 
 if [[ $OSTYPE == darwin* ]]; then
