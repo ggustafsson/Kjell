@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# Description: Start custom Tmux sessions.
+# Description: Start new (or attach existing) custom Tmux sessions.
 #
 # Usage: tmux-init
 #
@@ -18,4 +18,9 @@ tmux new-session -d -s $session2
 
 if [[ $HOST == Twoson ]]; then
   tmux new-session -d -s $session3
+fi
+
+# Don't attach if already inside of Tmux.
+if [[ -z $TMUX ]]; then
+  tmux attach-session -t $session1
 fi
