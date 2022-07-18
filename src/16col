@@ -41,7 +41,7 @@ for code in {100..107}; do
 done && echo
 
 echo '
-Escape    = \\e[  \\033[  \\x1B
+Escape    = \\e[  \\033[  \\x1B[
 Reset     = \\e[0m
 \e[1mBold\e[0m      = \\e[1m
 \e[3mItalic\e[0m    = \\e[3m
