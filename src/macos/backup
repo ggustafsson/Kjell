@@ -44,6 +44,7 @@ for object in $backup_objects; do
       --exclude=Dropbox/.dropbox.cache \
       --exclude=Dropbox/Public \
       --exclude=Dropbox/Shared \
+      --exclude=target/debug \
       $object $destination
   else
     echo "\nObject '$object' not found! Exiting..."
