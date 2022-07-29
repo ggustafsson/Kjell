@@ -21,15 +21,15 @@ if [[ $# -lt 1 ]]; then
 fi
 
 function mkbck {
-  for arg; do
-    if [[ ! -f $arg ]]; then
-      continue
-    fi
+  if [[ $mode == nnn ]]; then
+    flag=-n # Do not overwrite an existing file.
+  else
+    flag=-vi
+  fi
 
-    if [[ $mode == nnn ]]; then
-      cp -n -- "$arg" "$arg.bck"
-    else
-      cp -vi -- "$arg" "$arg.bck"
+  for arg; do
+    if [[ -f $arg ]]; then
+      cp $flag -- "$arg" "$arg.bck"
     fi
   done
 }
