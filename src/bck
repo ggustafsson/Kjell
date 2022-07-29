@@ -22,9 +22,9 @@ fi
 
 mkbck() {
   if [[ $mode == nnn ]]; then
-    cmd="cp -n"
+    cmd="cp -n --"
   else
-    cmd="cp -vi"
+    cmd="cp -vi --"
   fi
 
   for arg; do
