@@ -27,7 +27,7 @@ LESS=${LESS}c nnn $*
 
 if [[ -f $NNN_TMPFILE ]]; then
   source $NNN_TMPFILE
-  rm -f $NNN_TMPFILE > /dev/null
+  rm -f -- $NNN_TMPFILE > /dev/null
 fi
 
 if [[ $local_tmpfile -eq 1 ]]; then
