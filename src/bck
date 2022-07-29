@@ -20,16 +20,16 @@ if [[ $# -lt 1 ]]; then
   exit
 fi
 
-mkbck() {
-  if [[ $mode == nnn ]]; then
-    cmd="cp -n --"
-  else
-    cmd="cp -vi --"
-  fi
-
+function mkbck {
   for arg; do
-    if [[ -f $arg ]]; then
-      eval "$cmd '$arg' '$arg.bck'"
+    if [[ ! -f $arg ]]; then
+      continue
+    fi
+
+    if [[ $mode == nnn ]]; then
+      cp -n -- "$arg" "$arg.bck"
+    else
+      cp -vi -- "$arg" "$arg.bck"
     fi
   done
 }
