@@ -9,9 +9,9 @@
 # License: BSD 3-Clause
 
 if [[ $# -eq 0 ]]; then
-  find . -type f -name .DS_Store -exec rm -v "{}" \;
+  find . -type f -name .DS_Store -delete -print
 elif [[ $# -eq 1 ]]; then
-  find $1 -type f -name .DS_Store -exec rm -v "{}" \;
+  find $1 -type f -name .DS_Store -delete -print
 else
   echo "Usage: ${0:t} [PATH]..."
 fi
