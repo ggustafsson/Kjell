@@ -9,14 +9,11 @@
 # License: BSD 3-Clause
 
 url=https://lite.duckduckgo.com/lite
-browser=lynx
 
 if [[ $# -ge 1 ]]; then
   input=$*
   query=${input// /+} # Replace spaces with "+" for valid URL.
-  search_url="$url\?q=$query"
-
-  eval $browser $search_url
-else
-  eval $browser $url
+  url="$url\?q=$query"
 fi
+
+lynx $browser $url
