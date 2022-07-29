@@ -8,36 +8,37 @@
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
 
-color() {
+function color {
   printf "\e[${1}m %-4s \e[0m " "${1}m"
 }
 
 # Foreground colors.
-for code in {30..37}; do
-  color $code
+for i in {30..37}; do
+  color $i
 done && echo
-
 # Bright foreground colors.
-for code in {90..97}; do
-  color $code
+for i in {90..97}; do
+  color $i
 done && echo
 
 # Background colors.
-for code in {40..47}; do
-  color $code
+for i in {40..47}; do
+  color $i
 done && echo
-for code in {40..47}; do
+# Same with black foreground.
+for i in {40..47}; do
   echo -n "\e[30m"
-  color $code
+  color $i
 done && echo
 
 # Bright background colors.
-for code in {100..107}; do
-  color $code
+for i in {100..107}; do
+  color $i
 done && echo
-for code in {100..107}; do
+# Same with black foreground.
+for i in {100..107}; do
   echo -n "\e[30m"
-  color $code
+  color $i
 done && echo
 
 echo '

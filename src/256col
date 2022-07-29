@@ -9,9 +9,9 @@
 
 rst="\e[0m"
 
-for code in {0..255}; do
-  fg="\e[0;38;5;${code}m"
-  bg="\e[30;48;5;${code}m"
+for i in {0..255}; do
+  fg="\e[0;38;5;${i}m"
+  bg="\e[30;48;5;${i}m"
 
-  printf "$bg Color %-3s $rst ${fg}Color ${code}$rst\n" $code
+  printf "$bg Color %-3s $rst ${fg}Color ${i}$rst\n" $i
 done
