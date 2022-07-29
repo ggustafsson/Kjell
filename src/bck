@@ -22,14 +22,14 @@ fi
 
 function mkbck {
   if [[ $mode == nnn ]]; then
-    flag=-n # Do not overwrite an existing file.
+    flags=-n # Do not overwrite an existing file.
   else
-    flag=-vi
+    flags=-vi
   fi
 
   for arg; do
     if [[ -f $arg ]]; then
-      cp $flag -- "$arg" "$arg.bck"
+      cp $flags -- "$arg" "$arg.bck"
     fi
   done
 }
