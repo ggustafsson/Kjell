@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# Description: Frontend for https://cheat.sh. Result is displayed in PAGER.
+# Description: Frontend for https://cheat.sh. Result is displayed in "less".
 #
 # Usage: cht
 #        cht <query>
@@ -27,7 +27,7 @@ if [[ $# -ge 1 ]]; then
 
   header="# Source: $url_full\n"
   output="$header\n$response"
-  echo $output | eval ${PAGER:=less}
+  echo $output | less
 else
   curl --no-progress-meter "$url/:help"
 fi
