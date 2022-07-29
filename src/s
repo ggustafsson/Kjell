@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 
-# Description: Surf the web like it is 1999 with Lynx. Searches DuckDuckGo.
+# Description: Surf the web like it is 1999 with Lynx and DuckDuckGo.
 #
-# Usage: surf
-#        surf <query>
+# Usage: s
+#        s <query>
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
