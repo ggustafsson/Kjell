@@ -2,6 +2,8 @@
 
 # Description: Surf the web like it is 1999 with Lynx and DuckDuckGo.
 #
+# Dependencies: lynx
+#
 # Usage: s
 #        s <query>
 #

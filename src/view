@@ -3,6 +3,8 @@
 # Description: Nvim equivalent of Vim's "view" with additional quit mapping.
 # Using script instead of alias to allow for usage in Tmux and other scripts.
 #
+# Dependencies: nvim
+#
 # Usage: view
 #        view <path>
 #
