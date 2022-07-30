@@ -3,6 +3,8 @@
 # Description: Lookup full path to files/directories and copy list to system
 # clipboard. Optional non-interactive mode for use as nnn plugin.
 #
+# Dependencies: wl-copy/xclip/xsel (linux)
+#
 # ~/.zshrc:
 #
 #   export NNN_PLUG='y:-!yankp --nnn*'
@@ -21,8 +23,13 @@ if [[ $# -lt 1 ]]; then
   exit
 fi
 
+# XXX: xclip/xsel will be removed in 2030...
 if whence -p pbcopy &> /dev/null; then
   copy_cmd=pbcopy
+elif whence -p wl-copy &> /dev/null; then
+  copy_cmd=wl-copy
+elif whence -p xclip &> /dev/null; then
+  copy_cmd=xclip
 elif whence -p xsel &> /dev/null; then
   copy_cmd=xsel
 else
