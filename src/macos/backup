@@ -55,5 +55,5 @@ done
 echo "\nUnmounting external device."
 while true; do
   sleep 5
-  diskutil eject $destination && exit
+  diskutil eject $destination && break
 done
