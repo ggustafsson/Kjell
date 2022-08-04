@@ -15,7 +15,7 @@ elif [[ $# -eq 1 ]]; then
   projects_dir=$1
 else
   echo "Usage: ${0:t} [PATH]..."
-  exit
+  exit 1
 fi
 
 if [[ ! -d $projects_dir ]]; then

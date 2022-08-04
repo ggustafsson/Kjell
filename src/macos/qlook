@@ -9,7 +9,7 @@
 
 if [[ $# -eq 0 ]]; then
   echo "Usage: ${0:t} [FILENAME(S)]..."
-  exit
+  exit 1
 fi
 
 qlmanage -p $* &> /dev/null

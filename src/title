@@ -11,7 +11,7 @@
 
 if ARGV.empty?
   puts "Usage: #{File.basename($0)} [TEXT]..."
-  exit
+  exit 1
 end
 
 lowercase_words = %w(

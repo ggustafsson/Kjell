@@ -19,7 +19,7 @@ if [[ $# -eq 0 ]]; then
   echo "Usage: ${0:t} [OPTION]... [FILENAME(S)]...
 
   -i, --ignore-case  Don't fix capitalization in ID3 tags."
-  exit
+  exit 1
 fi
 
 echo "Converting FLAC file(s) to MP3 file(s)."

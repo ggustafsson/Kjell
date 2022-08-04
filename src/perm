@@ -24,7 +24,7 @@ else
 
   -l, --loose   Use permissions 755 on dirs and 644 on files.
   -s, --strict  Use permissions 700 on dirs and 600 on files."
-  exit
+  exit 1
 fi
 
 shift # Remove flag for argument list.

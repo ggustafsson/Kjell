@@ -17,7 +17,7 @@ if [[ $# -lt 1 ]]; then
   echo "Usage: ${0:t} [OPTION]... [PATH(S)]...
 
   -n, --nnn  Run as non-interactive nnn plugin."
-  exit
+  exit 1
 fi
 
 function mkbck {
