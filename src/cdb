@@ -1,35 +1,37 @@
 #!/usr/bin/env zsh
 
-# Description: Like "cd .." but on steroids. If argument is supplied then
-# current directory is changed to closest directory matching pattern.
+# Description: Select bookmark with Fzf and go to directory. Bookmarks are
+# symbolic links in ~/.config/nnn/bookmarks, or ~/.bookmarks as fallback.
 #
-# Example:
-#
-#   /Users/GLEG/Development/Python $ cdb Us
-#   /Users $
+# Dependencies: fzf
 #
 # ~/.zshrc:
 #
 #   alias cdb="source cdb"
 #
 # Usage: cdb
-#        cdb <pattern>
-#
-# Original: https://github.com/vigneshwaranr/bd/blob/master/bd
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
 
-if [[ $# -eq 1 ]]; then
-  cdb_dir=$(echo $PWD | sed 's|\(.*/'$1'[^/]*/\).*|\1|')
-  if [[ $cdb_dir != $PWD ]]; then
-    cd "$cdb_dir"
-  else
-    echo "No match found!"
-  fi
-  unset cdb_dir
-elif [[ $# -eq 0 ]]; then
-  cd ..
+cdb_nnn=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/bookmarks
+if [[ -d $cdb_nnn ]]; then
+  cdb_dir=$cdb_nnn
+elif [[ -d ~/.bookmarks ]]; then
+  cdb_dir=~/.bookmarks
 else
-  echo "Usage: ${0:t} [PATTERN]..."
+  echo "Failed to find bookmarks directory! Exiting..."
+  return 1
 fi
+
+cdb_sel=$(\ls "$cdb_dir" | fzf --tac)
+if [[ -z $cdb_sel ]]; then
+  return 1
+fi
+
+cdb_dst=$(readlink "$cdb_dir/$cdb_sel") # Destination of symbolic link.
+echo $cdb_dst
+cd "$cdb_dst"
+
+# Be nice and clean up before leaving...
+unset cdb_dir cdb_dst cdb_nnn cdb_sel

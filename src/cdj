@@ -1,37 +1,35 @@
 #!/usr/bin/env zsh
 
-# Description: Select bookmark with Fzf and go to directory. Bookmarks are
-# symbolic links in ~/.config/nnn/bookmarks, or ~/.bookmarks as fallback.
+# Description: Like "cd .." but on steroids. If argument is supplied then
+# current directory is changed to closest directory matching pattern.
 #
-# Dependencies: fzf
+# Example:
+#
+#   /Users/GLEG/Development/Python $ cdj Us
+#   /Users $
 #
 # ~/.zshrc:
 #
 #   alias cdj="source cdj"
 #
 # Usage: cdj
+#        cdj <pattern>
+#
+# Original: https://github.com/vigneshwaranr/bd/blob/master/bd
 #
 # Author: Göran Gustafsson (gustafsson.g at gmail.com)
 # License: BSD 3-Clause
 
-cdj_nnn=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/bookmarks
-if [[ -d $cdj_nnn ]]; then
-  cdj_dir=$cdj_nnn
-elif [[ -d ~/.bookmarks ]]; then
-  cdj_dir=~/.bookmarks
+if [[ $# -eq 1 ]]; then
+  cdj_dir=$(echo $PWD | sed 's|\(.*/'$1'[^/]*/\).*|\1|')
+  if [[ $cdj_dir != $PWD ]]; then
+    cd "$cdj_dir"
+  else
+    echo "No match found!"
+  fi
+  unset cdj_dir
+elif [[ $# -eq 0 ]]; then
+  cd ..
 else
-  echo "Failed to find bookmarks directory! Exiting..."
-  return 1
+  echo "Usage: ${0:t} [PATTERN]..."
 fi
-
-cdj_sel=$(\ls "$cdj_dir" | fzf --tac)
-if [[ -z $cdj_sel ]]; then
-  return 1
-fi
-
-cdj_dst=$(readlink "$cdj_dir/$cdj_sel") # Destination of symbolic link.
-echo $cdj_dst
-cd "$cdj_dst"
-
-# Be nice and clean up before leaving...
-unset cdj_dir cdj_dst cdj_nnn cdj_sel
