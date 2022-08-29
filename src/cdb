@@ -31,7 +31,7 @@ fi
 
 cdb_dst=$(readlink "$cdb_dir/$cdb_sel") # Destination of symbolic link.
 echo $cdb_dst
-cd "$cdb_dst"
+cd -- "$cdb_dst"
 
 # Be nice and clean up before leaving...
 unset cdb_dir cdb_dst cdb_nnn cdb_sel
