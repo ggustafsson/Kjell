@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# Description: Like "cd .." but on steroids. If argument is supplied then
-# current directory is changed to closest directory matching pattern.
+# Description: Like "cd .." but on steroids. Current directory is changed to
+# closest directory matching pattern.
 #
 # Example:
 #
@@ -12,8 +12,7 @@
 #
 #   alias cdj="source cdj"
 #
-# Usage: cdj
-#        cdj <pattern>
+# Usage: cdj <pattern>
 #
 # Original: https://github.com/vigneshwaranr/bd/blob/master/bd
 #
@@ -23,13 +22,11 @@
 if [[ $# -eq 1 ]]; then
   cdj_dir=$(echo $PWD | sed 's|\(.*/'$1'[^/]*/\).*|\1|')
   if [[ $cdj_dir != $PWD ]]; then
-    cd "$cdj_dir"
+    cd -- "$cdj_dir"
   else
     echo "No match found!"
   fi
   unset cdj_dir
-elif [[ $# -eq 0 ]]; then
-  cd ..
 else
   echo "Usage: ${0:t} [PATTERN]..."
 fi
