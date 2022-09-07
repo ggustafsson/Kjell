@@ -3,8 +3,6 @@
 # Description: Asks for input and loops until non-empty value. Used for running
 # non-interactive programs in a interactive way, e.g. in Tmux popup windows.
 #
-# Dependencies: dialog
-#
 # Examples:
 #
 #   # Quick & dirty. Empty value can pass.
@@ -13,6 +11,8 @@
 #   # Long & safe. Empty value not allowed.
 #   input=($(ask 'Man page?'))
 #   [[ -n $input ]] && man $input
+#
+# Dependencies: dialog
 #
 # Usage: ask
 #        ask <title>
