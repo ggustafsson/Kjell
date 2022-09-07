@@ -8,7 +8,7 @@
 # Usage: view
 #        view <path>
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 nvim -R -c "nmap q <Cmd>q<CR>" -c "set nolist nonumber norelativenumber" $*

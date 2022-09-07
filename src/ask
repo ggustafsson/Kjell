@@ -17,7 +17,7 @@
 # Usage: ask
 #        ask <title>
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 if [[ $# -ge 1 ]]; then

@@ -11,7 +11,7 @@
 #
 # Usage: cdb
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 cdb_nnn=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/bookmarks

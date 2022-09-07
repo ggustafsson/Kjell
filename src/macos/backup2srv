@@ -6,7 +6,7 @@
 #
 # Usage: backup2srv
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 server=ubuntu-tv1

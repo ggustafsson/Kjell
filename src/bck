@@ -10,7 +10,7 @@
 # Usage: bck <file> ...
 #        bck --nnn
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 if [[ $# -lt 1 ]]; then

@@ -12,7 +12,7 @@
 #        flac2mp3 *.flac
 #        find . -type f -iname "*.flac" -exec flac2mp3 "{}" \;
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 if [[ $# -eq 0 ]]; then

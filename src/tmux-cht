@@ -13,7 +13,7 @@
 #
 # Usage: tmux-cht
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 title="Enter cheat.sh query..."

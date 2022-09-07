@@ -12,7 +12,7 @@
 #
 # Usage: tmux-man
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 title="Enter man page(s)..."

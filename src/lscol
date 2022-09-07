@@ -6,7 +6,7 @@
 #
 # Original: https://unix.stackexchange.com/a/20742/13456
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 if [[ -z $LS_COLORS ]]; then

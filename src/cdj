@@ -16,7 +16,7 @@
 #
 # Original: https://github.com/vigneshwaranr/bd/blob/master/bd
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 if [[ $# -eq 1 ]]; then

@@ -7,7 +7,7 @@
 #
 # Usage: echo x | yank
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 gsed -z '$ s/\n$//' | pbcopy

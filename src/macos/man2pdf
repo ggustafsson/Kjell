@@ -5,7 +5,7 @@
 # Usage: man2pdf <man>
 #        man2pdf <man> <man> ...
 #
-# Author: Göran Gustafsson (gustafsson.g at gmail.com)
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
 if [[ $# -eq 0 ]]; then
