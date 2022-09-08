@@ -5,7 +5,7 @@
 # disable feature with -i flag.
 #
 # Dependencies: flac & lame
-# Optional: https://github.com/ggustafsson/Kjell/blob/master/src/title
+# Optional: https://github.com/ggustafsson/Pyttipanna/blob/master/src/title
 #
 # Usage: flac2mp3 <file>
 #        flac2mp3 --ignore-case <file>
