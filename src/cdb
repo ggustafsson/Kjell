@@ -3,11 +3,11 @@
 # Description: Select bookmark with Fzf and go to directory. Bookmarks are
 # symbolic links in ~/.config/nnn/bookmarks, or ~/.bookmarks as fallback.
 #
-# Dependencies: fzf
-#
 # ~/.zshrc:
 #
 #   alias cdb="source cdb"
+#
+# Dependencies: fzf
 #
 # Usage: cdb
 #

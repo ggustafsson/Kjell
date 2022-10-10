@@ -2,13 +2,13 @@
 
 # Description: Combines "ask" and "man" for use in Tmux popup window.
 #
-# Dependencies: ask
-#   https://github.com/ggustafsson/Kjell/blob/master/src/ask
-#
 # ~/.tmux.conf:
 #
 #   bind Enter menu -T "#[align=centre] Launcher " \
 #     "Open Man" m "popup -EE -h 60% -w 60% tmux-man"
+#
+# Dependencies: ask
+#   https://github.com/ggustafsson/Kjell/blob/master/src/ask
 #
 # Usage: tmux-man
 #

@@ -3,11 +3,11 @@
 # Description: Lookup full path to files/directories and copy list to system
 # clipboard. Optional non-interactive mode for use as nnn plugin.
 #
-# Dependencies: wl-copy/xclip/xsel (linux)
-#
 # ~/.zshrc:
 #
 #   export NNN_PLUG='y:-!yankp --nnn*'
+#
+# Dependencies: wl-copy/xclip/xsel (linux)
 #
 # Usage: yankp <file> ...
 #        yankp .

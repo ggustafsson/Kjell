@@ -2,12 +2,12 @@
 
 # Description: Run "nnn" and afterwards change directory in current shell.
 #
-# Dependencies: nnn
-#
 # ~/.zshrc:
 #
 #   compdef _nnn n3
 #   alias n3="source n3"
+#
+# Dependencies: nnn
 #
 # Usage: n3
 #
