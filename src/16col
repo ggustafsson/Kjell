@@ -13,32 +13,32 @@ function color {
 }
 
 # Foreground colors.
-for i in {30..37}; do
-  color $i
+for num in {30..37}; do
+  color $num
 done && echo
 # Bright foreground colors.
-for i in {90..97}; do
-  color $i
+for num in {90..97}; do
+  color $num
 done && echo
 
 # Background colors.
-for i in {40..47}; do
-  color $i
+for num in {40..47}; do
+  color $num
 done && echo
 # Same with black foreground.
-for i in {40..47}; do
+for num in {40..47}; do
   echo -n "\e[30m"
-  color $i
+  color $num
 done && echo
 
 # Bright background colors.
-for i in {100..107}; do
-  color $i
+for num in {100..107}; do
+  color $num
 done && echo
 # Same with black foreground.
-for i in {100..107}; do
+for num in {100..107}; do
   echo -n "\e[30m"
-  color $i
+  color $num
 done && echo
 
 echo '
