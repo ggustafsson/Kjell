@@ -7,11 +7,11 @@
 # Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
-rst="\e[0m"
+reset="\e[0m"
 
-for i in {0..255}; do
-  fg="\e[0;38;5;${i}m"
-  bg="\e[30;48;5;${i}m"
+for num in {0..255}; do
+  fg="\e[0;38;5;${num}m"
+  bg="\e[30;48;5;${num}m"
 
-  printf "$bg Color %-3s $rst ${fg}Color ${i}$rst\n" $i
+  printf "$bg Color %-3s $reset ${fg}Color ${num}$reset\n" $num
 done
