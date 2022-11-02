@@ -19,6 +19,7 @@ fi
 destination=/Volumes/Keychain\ 1
 
 backup_objects=(
+  ~/.gnupg
   ~/.ssh
   ~/Documents
   ~/Dropbox
