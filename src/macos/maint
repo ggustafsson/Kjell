@@ -12,7 +12,7 @@ if [[ $HOST == Onett ]]; then
     1 "maint-ansible" on
     2 "rmhogs"        on
     3 "backup"        on
-    4 "backup2srv"    on
+    4 "backup2srv"    off
     5 "gitpl"         off
   )
 else
