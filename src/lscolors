@@ -2,7 +2,7 @@
 
 # Description: Pretty prints "LS_COLORS" setting.
 #
-# Usage: lscol
+# Usage: lscolors
 #
 # Original: https://unix.stackexchange.com/a/20742/13456
 #
