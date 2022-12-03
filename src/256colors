@@ -2,7 +2,7 @@
 
 # Description: Pretty prints all 256 terminal colors.
 #
-# Usage: 256col
+# Usage: 256colors
 #
 # Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
