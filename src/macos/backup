@@ -47,6 +47,7 @@ for object in $backup_objects; do
       --exclude=Dropbox/Public \
       --exclude=Dropbox/Shared \
       --exclude=target/debug \
+      --exclude=target/doc \
       $object $destination
   else
     echo "\nObject '$object' not found! Exiting..."
