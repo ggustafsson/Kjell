@@ -22,7 +22,7 @@ backup_objects=(
   ~/.gnupg
   ~/.ssh
   ~/Documents
-  ~/Dropbox
+  ~/Library/CloudStorage/Dropbox
   ~/Movies
   ~/Music
   ~/Pictures
@@ -43,9 +43,6 @@ for object in $backup_objects; do
   if [[ -a $object ]]; then
     print -P "\n%B%F{green}Backing up: ${object/$HOME/~}%f%b"
     rsync --archive --delete --human-readable --verbose \
-      --exclude=Dropbox/.dropbox.cache \
-      --exclude=Dropbox/Public \
-      --exclude=Dropbox/Shared \
       --exclude=target/debug \
       --exclude=target/doc \
       $object $destination
