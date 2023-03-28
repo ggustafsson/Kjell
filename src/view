@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# Description: Nvim equivalent of Vim's "view" with additional quit mapping.
+# Description: Nvim equivalent of Vim's "view" with some additional settings.
 # Using script instead of alias to allow for usage in Tmux and other scripts.
 #
 # Dependencies: nvim
@@ -11,4 +11,9 @@
 # Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
-nvim -R -c "nmap q <Cmd>q<CR>" -c "set nolist nonumber norelativenumber" $*
+nvim \
+  -R \
+  -c "lua vim.diagnostic.disable()" \
+  -c "set nolist nonumber norelativenumber" \
+  -c "nmap q <Cmd>q<CR>" \
+  $*
