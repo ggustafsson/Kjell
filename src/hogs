@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+
+# Description: List size of files and directories in current directory, or
+# optionally in directory specified through argument.
+#
+# Usage: hogs
+#        hogs <path>
+#
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
+# License: BSD 3-Clause
+
+if [[ $# -eq 0 ]]; then
+  du -hs * | sort --human-numeric-sort --reverse | head -n 20
+elif [[ $# -eq 1 ]]; then
+  du -hs $1/* | sort --human-numeric-sort --reverse | head -n 20
+else
+  echo "Usage: ${0:t} [PATH]..."
+fi
