@@ -1,0 +1,30 @@
+#!/usr/bin/env zsh
+
+# Description: Combines script "ask" with any command for use in Tmux popup
+# windows. First argument specifies command to execute. Remaining argument(s)
+# specifies title to use in input dialog.
+#
+# ~/.tmux.conf:
+#
+#   bind Enter menu -T "#[align=centre] Launcher " \
+#     "Open Man" m "popup -EE tmux-run man 'Enter man page(s)...'"
+#
+# Dependencies: ask
+#
+#   https://github.com/ggustafsson/Kjell/blob/master/src/ask
+#
+# Usage: tmux-run
+#
+# Author: Göran Gustafsson <gustafsson.g@gmail.com>
+# License: BSD 3-Clause
+
+command=$1
+shift
+title=$*
+input=($(ask $title)) # Use array to split up input into multiple arguments.
+
+if [[ -n $input ]]; then
+  eval $command $input
+else
+  exit 1
+fi
