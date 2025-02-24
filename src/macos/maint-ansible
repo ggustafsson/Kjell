@@ -35,4 +35,4 @@ fi
 print -P "%B%F{cyan}ansible-playbook $playbook:%f%b"
 confirm || exit 1
 cd $dir
-ansible-playbook $playbook --ask-become || exit $?
+ansible-playbook $playbook --diff --ask-become || exit $?
