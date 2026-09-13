@@ -13,10 +13,9 @@ server=ubuntu-tv1
 destination=/media/external
 
 backup_objects=(
+  ~/Downloads/Torrents
   ~/Music/FLAC
   ~/Music/MP3
-  /Volumes/External\ 1/Movies
-  /Volumes/External\ 1/Series
 )
 
 echo -n "SSH test connection to server '$server'..."
