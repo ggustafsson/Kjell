@@ -9,7 +9,7 @@
 # Author: Göran Gustafsson <gustafsson.g@gmail.com>
 # License: BSD 3-Clause
 
-server=ubuntu-tv1
+server=ubuntu-srv1
 destination=/media/external
 
 backup_objects=(
