@@ -13,7 +13,8 @@ server=ubuntu-srv1
 destination=/media/external
 
 backup_objects=(
-  ~/Downloads/Torrents
+  ~/Downloads/Dungeon
+  ~/Downloads/Movies
   ~/Music/FLAC
   ~/Music/MP3
 )
