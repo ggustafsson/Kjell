@@ -2,7 +2,7 @@
 
 ## Description
 
-- Miscellaneous Zsh scripts.
+- Miscellaneous shell scripts.
 
 - Detailed description in each source file.
 
