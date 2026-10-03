@@ -2,7 +2,7 @@
 
 ## Description
 
-- Miscellaneous shell scripts.
+- Miscellaneous Zsh scripts.
 
 - Detailed description in each source file.
 
@@ -17,3 +17,4 @@
 - [Golang: Godis](https://github.com/ggustafsson/godis)
 - [Python: Pyttipanna](https://github.com/ggustafsson/Pyttipanna)
 - [Rust: Skrot](https://github.com/ggustafsson/Skrot)
+- [Swift: Kvickt](https://github.com/ggustafsson/Kvickt)
