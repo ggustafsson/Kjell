@@ -13,7 +13,7 @@
 
 nvim \
   -R \
-  -c "lua vim.diagnostic.disable()" \
+  -c "lua vim.diagnostic.enable(false)" \
   -c "set nolist nonumber norelativenumber" \
   -c "nmap q <Cmd>q<CR>" \
   $*
