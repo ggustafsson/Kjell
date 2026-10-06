@@ -16,7 +16,7 @@ if [[ $1 != (-y|--yes) ]]; then
   confirm || exit 1
 fi
 
-destination=/Volumes/Keychain\ 1
+destination=/Volumes/Keychain
 
 backup_objects=(
   ~/.gnupg
